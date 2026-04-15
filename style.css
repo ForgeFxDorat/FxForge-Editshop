@@ -6,25 +6,28 @@ body {
   text-align: center;
 }
 
+/* HEADER */
 header {
-  padding: 40px;
+  padding: 40px 20px;
 }
 
 .logo {
-  width: 200px;
-  margin-bottom: 10px;
+  width: 220px;
+  filter: drop-shadow(0 0 15px #a855f7);
 }
 
 h1 {
+  margin: 10px 0 0 0;
   font-size: 50px;
-  margin: 0;
   color: #c77dff;
 }
 
-p {
+.subtitle {
   color: #aaa;
+  margin-top: 5px;
 }
 
+/* PRODUCTS */
 .products {
   display: flex;
   justify-content: center;
@@ -37,44 +40,40 @@ p {
   background: #140022;
   border: 1px solid #5a00a8;
   padding: 20px;
-  width: 200px;
-  border-radius: 10px;
+  width: 250px;
+  border-radius: 12px;
   transition: 0.3s;
 }
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px #a855f7;
+  box-shadow: 0 0 25px #a855f7;
 }
 
+.price {
+  font-size: 22px;
+  color: #c77dff;
+  margin: 10px 0;
+}
+
+/* BUTTON */
 button {
   background: #7b2cbf;
   border: none;
   padding: 10px 20px;
   color: white;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
 button:hover {
   background: #9d4edd;
 }
 
+/* FOOTER */
 footer {
   margin-top: 40px;
   padding: 20px;
   color: #777;
-}
-.price {
-  font-size: 20px;
-  color: #c77dff;
-  margin: 10px 0;
-}
-.logo {
-  width: 250px;
-  margin-bottom: 10px;
-}
-.logo {
-  width: 250px;
-  filter: drop-shadow(0 0 15px #a855f7);
 }
