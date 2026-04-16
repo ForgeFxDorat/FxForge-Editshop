@@ -1,173 +1,57 @@
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
   color: white;
-  text-align: center;
-  overflow-x: hidden;
-
-  background: linear-gradient(-45deg, #0a0014, #1a0033, #240046, #3c096c);
-  background-size: 400% 400%;
-  animation: gradientMove 15s ease infinite;
 }
 
-@keyframes gradientMove {
-  0% { background-position: 0% }
-  50% { background-position: 100% }
-  100% { background-position: 0% }
-}
-
-/* PARTICLES */
-#particles {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.particle {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background: #c77dff;
-  border-radius: 50%;
-  box-shadow: 0 0 12px #a855f7;
-  animation: floatUp linear infinite;
-}
-
-@keyframes floatUp {
-  from { transform: translateY(100vh); opacity: 0; }
-  10% { opacity: 1; }
-  to { transform: translateY(-10vh); opacity: 0; }
-}
-
-/* HEADER */
 header {
-  padding: 50px 20px;
+  text-align: center;
+  padding: 40px 20px;
 }
 
 .logo {
-  width: 200px;
-  filter: drop-shadow(0 0 35px #a855f7);
-}
-
-h1 {
-  font-size: 50px;
-  color: #c77dff;
-  text-shadow: 0 0 30px #7b2cbf;
+  width: 120px;
 }
 
 .subtitle {
-  color: #bbb;
+  opacity: 0.7;
 }
 
-/* PRODUCTS */
 .products {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
   padding: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-/* CARD */
 .card {
-  position: relative;
-  background: rgba(20, 0, 34, 0.85);
-  backdrop-filter: blur(12px);
-
-  border: 1px solid #7b2cbf;
+  background: #111;
   padding: 20px;
-  width: 260px;
-  border-radius: 16px;
-
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 0 45px #a855f7;
-}
-
-/* 💎 BASIC FEATURED */
-.card.basic {
-  border: 2px solid #c77dff;
-  box-shadow: 0 0 35px #a855f7;
-  transform: scale(1.08);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1.08); }
-  50% { transform: scale(1.12); }
-  100% { transform: scale(1.08); }
-}
-
-/* 💎 BADGE */
-.badge {
-  position: absolute;
-  top: -12px;
-  right: -12px;
-
-  background: linear-gradient(45deg, #c77dff, #7b2cbf);
-  padding: 6px 12px;
-  font-size: 12px;
-  border-radius: 20px;
-
-  box-shadow: 0 0 20px #c77dff;
-  animation: pulseBadge 1.8s infinite;
-}
-
-@keyframes pulseBadge {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-  100% { transform: scale(1); }
+  border-radius: 12px;
+  text-align: center;
 }
 
 .price {
-  color: #c77dff;
-  font-size: 20px;
+  font-size: 18px;
+  margin: 10px 0;
 }
 
-/* 🔥 BUY BUTTON GLOW BOX FIX */
 .buy-btn {
   display: inline-block;
-  margin-top: 12px;
-
-  padding: 12px 20px;
-  border-radius: 12px;
-
-  background: linear-gradient(45deg, #7b2cbf, #c77dff);
-  color: white;
+  padding: 10px 15px;
+  background: white;
+  color: black;
   text-decoration: none;
-
-  font-weight: bold;
-
-  box-shadow:
-    0 0 15px #7b2cbf,
-    0 0 30px rgba(199, 125, 255, 0.4);
-
-  transition: 0.25s;
+  border-radius: 8px;
 }
 
-.buy-btn:hover {
-  transform: scale(1.15);
-  box-shadow:
-    0 0 25px #c77dff,
-    0 0 60px #a855f7;
-}
-
-/* 📱 MOBILE */
-@media (max-width: 600px) {
-  .products {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-  }
-
-  .card.basic {
-    transform: none;
-  }
+.basic .badge {
+  background: gold;
+  color: black;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 12px;
 }
