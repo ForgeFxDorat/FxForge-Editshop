@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <!-- Open Graph (link preview) -->
-<meta property="og:title" content="FxForge | Editshop">
-<meta property="og:description" content="High quality edits, thumbnails & montages.">
-<meta property="og:image" content="https://boraburger06-ai.github.io/FxForge-Editshop/logo.gif">
-<meta property="og:url" content="https://boraburger06-ai.github.io/FxForge-Editshop/">
-<meta property="og:type" content="website">
 <head>
   <meta charset="UTF-8">
   <title>FxForge | Editshop</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
 
-<!-- PARTICLES -->
 <div id="particles"></div>
 
 <header>
   <img src="logo.gif" class="logo">
   <h1>FXFORGE</h1>
-  <p class="subtitle">Editshop</p>
+  <p class="subtitle">Premium Editshop</p>
 </header>
 
 <section class="products">
+
+  <!-- Thumbnail -->
   <div class="card">
-  <h2>Thumbnail</h2>
-  <p>Custom thumbnail  (YouTube / edits)</p>
-  <p class="price">€2.50</p>
-  <button onclick="window.location.href='https://tikkie.me/pay/JOUW-THUMBNAIL-LINK'">
-    Buy
-  </button>
-</div>
+    <h2>Thumbnail</h2>
+    <p>Custom YouTube thumbnail</p>
+    <p class="price">€2.50</p>
+    <button class="disabled">Coming Soon</button>
+  </div>
 
- <div class="card basic">
+  <!-- BASIC (MAIN PRODUCT) -->
+  <div class="card basic">
     <h2>Basic Montage</h2>
-    <p>0-14 clips</p>
-    <p class="price">€3,50</p>
-    <a href="https://betaalverzoek.rabobank.nl/betaalverzoek/?id=FoFhVXWTTeCQGcCJZnq1WA" target="_blank" class="buy-btn">Buy</a>
+    <p>0–14 clips</p>
+    <p class="price">€3.50</p>
+
+    <a href="https://betaalverzoek.rabobank.nl/betaalverzoek/?id=FoFhVXWTTeCQGcCJZnq1WA"
+       target="_blank"
+       class="buy-btn">
+       Buy Now
+    </a>
   </div>
 
- <div class="card basic">
+  <!-- PRO -->
+  <div class="card">
     <h2>Pro Montage</h2>
-    <p>8-20 clips + thumbnail</p>
-    <p class="price">€4,5</p>
-    <button onclick="window.location.href='https://tikkie.me/pay/2'">Buy</button>
+    <p>8–20 clips + thumbnail</p>
+    <p class="price">€4.50</p>
+    <button class="disabled">Coming Soon</button>
   </div>
 
- <div class="card basic">
+  <!-- ULTRA -->
+  <div class="card">
     <h2>Ultra Montage</h2>
-    <p>15-25 clips + cinematic + thumbnail</p>
-    <p class="price">€6</p>
-    <button onclick="window.location.href='https://tikkie.me/pay/3'">Buy</button>
+    <p>15–25 clips + cinematic</p>
+    <p class="price">€6.00</p>
+    <button class="disabled">Coming Soon</button>
   </div>
 
 </section>
@@ -60,12 +61,12 @@
 <script>
 const container = document.getElementById("particles");
 
-for (let i = 0; i < 60; i++) {
+for (let i = 0; i < 70; i++) {
   const p = document.createElement("div");
   p.classList.add("particle");
 
   p.style.left = Math.random() * 100 + "vw";
-  p.style.animationDuration = (5 + Math.random() * 10) + "s";
+  p.style.animationDuration = (6 + Math.random() * 10) + "s";
   p.style.opacity = Math.random();
 
   container.appendChild(p);
