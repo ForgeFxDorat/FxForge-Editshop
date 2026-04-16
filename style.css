@@ -10,7 +10,6 @@ body {
   animation: gradientMove 15s ease infinite;
 }
 
-/* 🌌 MOVING BACKGROUND */
 @keyframes gradientMove {
   0% { background-position: 0% }
   50% { background-position: 100% }
@@ -36,15 +35,9 @@ body {
 }
 
 @keyframes floatUp {
-  from {
-    transform: translateY(100vh);
-    opacity: 0;
-  }
+  from { transform: translateY(100vh); opacity: 0; }
   10% { opacity: 1; }
-  to {
-    transform: translateY(-10vh);
-    opacity: 0;
-  }
+  to { transform: translateY(-10vh); opacity: 0; }
 }
 
 /* HEADER */
@@ -54,7 +47,7 @@ header {
 
 .logo {
   width: 200px;
-  filter: drop-shadow(0 0 30px #a855f7);
+  filter: drop-shadow(0 0 35px #a855f7);
 }
 
 h1 {
@@ -67,7 +60,7 @@ h1 {
   color: #bbb;
 }
 
-/* CARDS */
+/* PRODUCTS */
 .products {
   display: flex;
   justify-content: center;
@@ -76,27 +69,37 @@ h1 {
   padding: 40px;
 }
 
+/* CARD */
 .card {
   position: relative;
-  background: rgba(20, 0, 34, 0.8);
-  backdrop-filter: blur(10px);
+  background: rgba(20, 0, 34, 0.85);
+  backdrop-filter: blur(12px);
+
   border: 1px solid #7b2cbf;
   padding: 20px;
   width: 260px;
   border-radius: 16px;
+
   transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 0 50px #a855f7;
+  box-shadow: 0 0 45px #a855f7;
 }
 
-/* 🔥 BASIC SPECIAL */
+/* 💎 BASIC FEATURED */
 .card.basic {
   border: 2px solid #c77dff;
-  box-shadow: 0 0 30px #a855f7;
+  box-shadow: 0 0 35px #a855f7;
   transform: scale(1.08);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1.08); }
+  50% { transform: scale(1.12); }
+  100% { transform: scale(1.08); }
 }
 
 /* 💎 BADGE */
@@ -104,17 +107,19 @@ h1 {
   position: absolute;
   top: -12px;
   right: -12px;
+
   background: linear-gradient(45deg, #c77dff, #7b2cbf);
   padding: 6px 12px;
   font-size: 12px;
   border-radius: 20px;
-  box-shadow: 0 0 15px #c77dff;
-  animation: pulse 2s infinite;
+
+  box-shadow: 0 0 20px #c77dff;
+  animation: pulseBadge 1.8s infinite;
 }
 
-@keyframes pulse {
+@keyframes pulseBadge {
   0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  50% { transform: scale(1.15); }
   100% { transform: scale(1); }
 }
 
@@ -123,50 +128,39 @@ h1 {
   font-size: 20px;
 }
 
-/* BUTTONS */
-button,
+/* 🔥 BUY BUTTON GLOW BOX FIX */
 .buy-btn {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 12px;
+
+  padding: 12px 20px;
+  border-radius: 12px;
+
   background: linear-gradient(45deg, #7b2cbf, #c77dff);
-  padding: 10px 20px;
   color: white;
-  border-radius: 8px;
   text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
+
+  font-weight: bold;
+
+  box-shadow:
+    0 0 15px #7b2cbf,
+    0 0 30px rgba(199, 125, 255, 0.4);
+
+  transition: 0.25s;
 }
 
-button:hover,
 .buy-btn:hover {
   transform: scale(1.15);
-  box-shadow: 0 0 25px #c77dff;
+  box-shadow:
+    0 0 25px #c77dff,
+    0 0 60px #a855f7;
 }
 
-/* DISABLED */
-.disabled {
-  background: #555;
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.disabled:hover {
-  transform: none;
-  box-shadow: none;
-}
-
-/* 📱 MOBILE FIX */
+/* 📱 MOBILE */
 @media (max-width: 600px) {
-
-  h1 {
-    font-size: 35px;
-  }
-
   .products {
     flex-direction: column;
     align-items: center;
-    padding: 20px;
   }
 
   .card {
